@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 """
 Returns the first element of a sequence if it exists, otherwise None
 """
