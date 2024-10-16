@@ -1,14 +1,10 @@
 #!/usr/bin/env python3
 """
-Async routine with 2 args
-"""
-import asyncio
+a coroutine called async_comprehension that takes no arguments."""
 from typing import List
+async_generator = __import__('0-async_generator').async_generator
 
 
-async def wait_n(n: int, max_delay: int) -> List[float]:
-    """Spaw wait random n times)"""
-    wait_random = __import__('0-basic_async_syntax').wait_random
-    delay = await asyncio.gather(*(wait_random(max_delay) for _ in range(n)))
-
-    return sorted(delay)
+async def async_comprehension() -> List[float]:
+    """Collects 10 random numbers asynchronously using async comprehension"""
+    return [num async for num in async_generator()]
